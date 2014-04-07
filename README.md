@@ -7,7 +7,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'coub-api'
+    gem 'coub-api', github: 'div/coub-api'
 
 And then execute:
 

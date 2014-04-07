@@ -8,7 +8,7 @@ describe Coub do
   describe "when delegating to a client" do
 
      before do
-       @get = stub_get("search.json").
+       @get = stub_get("v1/search.json").
          to_return(:body => fixture("search.json"), :headers => {:content_type => "application/json; charset=utf-8"})
      end
 

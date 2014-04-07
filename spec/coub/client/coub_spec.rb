@@ -32,7 +32,7 @@ module Coub
         describe '#search' do
           let(:q) { 'zhopa' }
           before do
-            @get = stub_get("search.#{format}").
+            @get = stub_get("v1/search.#{format}").
               with(query: {q: q}).
               to_return(:body => fixture("search.#{format}"), headers: {content_type: "application/#{format}; charset=utf-8"})
           end

@@ -42,7 +42,7 @@ module Coub
     # The endpoint that will be used to connect if none is set
     #
     # @note There is no reason to use any other endpoint at this time
-    DEFAULT_ENDPOINT = 'http://coub.com/api/v1/'.freeze
+    DEFAULT_ENDPOINT = 'http://coub.com/api/'.freeze
 
     # The response format appended to the path and sent in the 'Accept' header if none is set
     #

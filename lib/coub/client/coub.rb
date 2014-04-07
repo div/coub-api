@@ -12,7 +12,7 @@ module Coub
 
       def search(*args)
         options = args.first.is_a?(Hash) ? args.pop : {}
-        response = get('search', options)
+        response = get('v1/search', options)
         response
       end
     end

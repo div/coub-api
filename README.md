@@ -13,10 +13,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install coub-api
-
 ## Usage
 ```
 r = Coub.search 'stuff', sort_by: :date

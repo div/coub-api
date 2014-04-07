@@ -38,12 +38,12 @@ module Coub
           end
 
           it "should get the correct resource" do
-            @client.search(q: q)
+            @client.search(q)
             assert_requested @get
           end
 
           describe Response do
-            let(:search_response){ @client.search(q: q) }
+            let(:search_response){ @client.search(q) }
 
             subject { search_response }
 

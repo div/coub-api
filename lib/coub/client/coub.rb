@@ -10,9 +10,8 @@ module Coub
         response
       end
 
-      def search(*args)
-        options = args.first.is_a?(Hash) ? args.pop : {}
-        response = get('v1/search', options)
+      def search(query, options={})
+        response = get('v1/search', options.merge(q: query))
         response
       end
     end

@@ -9,16 +9,17 @@ describe Coub do
 
      before do
        @get = stub_get("v1/search.json").
-         to_return(:body => fixture("search.json"), :headers => {:content_type => "application/json; charset=utf-8"})
+        with(query: {q: :anything}).
+        to_return(:body => fixture("search.json"), :headers => {:content_type => "application/json; charset=utf-8"})
      end
 
      it "should get the correct resource" do
-       Coub.search
+       Coub.search('anything')
        assert_requested @get
      end
 
      it "should return the same results as a client" do
-       Coub.search.must_equal Coub::Client.new.search
+       Coub.search('anything').must_equal Coub::Client.new.search('anything')
      end
 
   end

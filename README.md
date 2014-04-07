@@ -19,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 ```
-r = Coub.search q: 'stuff'
+r = Coub.search 'stuff', sort_by: :date
 coubs = r.coubs
 => [...]
 users = r.users

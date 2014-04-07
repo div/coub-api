@@ -18,3 +18,17 @@ Or install it yourself as:
     $ gem install coub-api
 
 ## Usage
+```
+r = Coub.search q: 'stuff'
+coubs = r.coubs
+=> [...]
+users = r.users
+=> [...]
+pagination = r.pagination
+=> {"page"=>1, "total_pages"=>11, "per_page"=>10}
+c = coubs.first
+=> {...}
+embed = Coub.oembed c.permalink
+=> {...}
+embed.html
+=> "<iframe src=\"http://coub.com/embed/12438d40\" allowfullscreen=\"true\" frameborder=\"0\" width=\"640\" height=\"359\"></iframe>"
